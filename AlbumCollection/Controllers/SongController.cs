@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AlbumCollection.Repositories;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,13 @@ namespace AlbumCollection.Controllers
 {
     public class SongController : Controller
     {
+        ISongRepository songRepository;
 
+        public SongController(ISongRepository songRepository)
+        {
+            this.songRepository = songRepository;
+        }
+
+        
     }
 }

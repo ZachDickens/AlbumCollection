@@ -7,5 +7,7 @@ namespace AlbumCollection.Repositories
 {
     public class SongRepository : ISongRepository
     {
+        AlbumContext db;
+
     }
 }

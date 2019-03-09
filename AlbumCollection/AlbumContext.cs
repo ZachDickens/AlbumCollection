@@ -22,5 +22,78 @@ namespace AlbumCollection
 
             base.OnConfiguring(optionsBuilder);
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Album>().HasData(
+
+                new Album()
+                {
+                    AlbumId = 1,
+                    AlbumName = "Hybrid Theory",
+                    ArtistName = "Linkin Park"
+                },
+
+                new Album()
+                {
+                    AlbumId = 2,
+                    AlbumName = "Meteora",
+                    ArtistName = "Linkin Park"
+                },
+
+                new Album()
+                {
+                    AlbumId = 3,
+                    AlbumName = "Minutes to Midnight",
+                    ArtistName = "Linkin Park"
+                });
+
+            modelBuilder.Entity<Song>().HasData(
+
+                new Song()
+                {
+                    AlbumId = 1,
+                    SongId = 1,
+                    SongName = "In the End"
+                },
+
+                new Song()
+                {
+                    AlbumId = 1,
+                    SongId = 2,
+                    SongName = "Crawling"
+                },
+
+                new Song()
+                {
+                    AlbumId = 2,
+                    SongId = 1,
+                    SongName = "Somewhere I Belong"
+                },
+
+                new Song()
+                {
+                    AlbumId = 2,
+                    SongId = 2,
+                    SongName = "Faint"
+                },
+
+                new Song()
+                {
+                    AlbumId = 3,
+                    SongId = 1,
+                    SongName = "What I've Done"
+                },
+
+                new Song()
+                {
+                    AlbumId = 3,
+                    SongId = 2,
+                    SongName = "Leave Out All The Rest"
+                });
+
+            base.OnModelCreating(modelBuilder);
+
+        }
     }
 }

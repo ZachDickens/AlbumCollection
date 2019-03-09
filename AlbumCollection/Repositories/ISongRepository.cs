@@ -7,5 +7,9 @@ namespace AlbumCollection.Repositories
 {
     public interface ISongRepository
     {
+        public ISongRepository()
+        {
+
+        }
     }
 }
