@@ -19,7 +19,7 @@
             <li><a href="/Album/details/1">Hybrid Theory</a></li>
             <li><a href="/Album/details/2">Meteora</a></li>
             <li><a href="/Album/details/3">Minutes to Midnight</a></li>
-            <li><a href="/Song/Create">Add a Song</a></li>
+
         </ul>
     </nav>
     <h4>Song</h4>
@@ -45,7 +45,7 @@
     </div>
 
     <div>
-        <a asp-action="../Album/Index">Back to List</a>
+        <a asp-action="/Song/AddSong/@Model.AlbumId">Add a Song to the Album</a>
     </div>
 
 </body>
