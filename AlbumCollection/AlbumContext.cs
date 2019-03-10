@@ -67,28 +67,28 @@ namespace AlbumCollection
                 new Song()
                 {
                     AlbumId = 2,
-                    SongId = 1,
+                    SongId = 3,
                     SongName = "Somewhere I Belong"
                 },
 
                 new Song()
                 {
                     AlbumId = 2,
-                    SongId = 2,
+                    SongId = 4,
                     SongName = "Faint"
                 },
 
                 new Song()
                 {
                     AlbumId = 3,
-                    SongId = 1,
+                    SongId = 5,
                     SongName = "What I've Done"
                 },
 
                 new Song()
                 {
                     AlbumId = 3,
-                    SongId = 2,
+                    SongId = 6,
                     SongName = "Leave Out All The Rest"
                 });
 

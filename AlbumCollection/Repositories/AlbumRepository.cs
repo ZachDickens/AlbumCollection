@@ -20,12 +20,14 @@ namespace AlbumCollection.Repositories
             return db.Albums.Single(album => album.AlbumId == id);
         }
 
-        public Album GetAll()
+        public IEnumerable<Album> GetAll()
         {
             return db.Albums.ToList();
         }
-        public List<Song> Songs { get; set; }
 
-
+        public Album GetById(int id)
+        {
+            return db.Albums.Single(s => s.AlbumId == id);
+        }
     }
 }

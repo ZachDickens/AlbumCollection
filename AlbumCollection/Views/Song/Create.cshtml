@@ -1,10 +1,17 @@
 ﻿@model AlbumCollection.Models.Song
 
 @{
-    ViewData["Title"] = "Create";
+    Layout = null;
 }
 
-<h2>Create</h2>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
 
 <h4>Song</h4>
 <hr />
@@ -18,6 +25,10 @@
                 <span asp-validation-for="SongName" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="AlbumId" class="control-label"></label>
+                <select asp-for="AlbumId" class ="form-control" asp-items="ViewBag.AlbumId"></select>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </form>
@@ -28,3 +39,5 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+</body>
+</html>

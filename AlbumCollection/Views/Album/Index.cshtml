@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<AlbumCollection.Models.Album>
 @{
     Layout = null;
 }
@@ -11,5 +11,10 @@
     <title>Index</title>
 </head>
 <body>
+    @foreach (var album in Model)
+    {
+        <a href="/Album/details/@album.AlbumId">@album.AlbumName</a>
+    }
+    <a href="/Song/Create">Add a Song</a>
 </body>
 </html>

@@ -1,5 +1,6 @@
 ﻿using AlbumCollection.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using AlbumCollection.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,18 @@ namespace AlbumCollection.Controllers
 
         public AlbumController(IAlbumRepository albumRepository)
         {
-            this.albumRepo = albumRepo;
+            this.albumRepository = albumRepository;
         }
 
         public ViewResult Index()
         {
-            var model = albumRepo.GetAll();
+            IEnumerable<Album> model = albumRepository.GetAll();
+            return View(model);
+        }
+
+        public ViewResult Details(int id)
+        {
+            var model = albumRepository.GetById(id);
             return View(model);
         }
 

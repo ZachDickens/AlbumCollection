@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlbumCollection.Migrations
 {
     [DbContext(typeof(AlbumContext))]
-    [Migration("20190308194143_InitialMigration")]
+    [Migration("20190309235952_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,28 +22,42 @@ namespace AlbumCollection.Migrations
 
             modelBuilder.Entity("AlbumCollection.Models.Album", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("AlbumId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("AlbumName");
 
-                    b.HasKey("Id");
+                    b.Property<string>("ArtistName");
+
+                    b.HasKey("AlbumId");
 
                     b.ToTable("Albums");
                 });
 
             modelBuilder.Entity("AlbumCollection.Models.Song", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("SongId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("AlbumId");
+
                     b.Property<string>("SongName");
 
-                    b.HasKey("Id");
+                    b.HasKey("SongId");
+
+                    b.HasIndex("AlbumId");
 
                     b.ToTable("Songs");
+                });
+
+            modelBuilder.Entity("AlbumCollection.Models.Song", b =>
+                {
+                    b.HasOne("AlbumCollection.Models.Album")
+                        .WithMany("Songs")
+                        .HasForeignKey("AlbumId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
