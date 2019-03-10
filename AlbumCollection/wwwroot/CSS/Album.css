@@ -1,2 +1,32 @@
-﻿body {
+﻿
+
+body {
+    
+    background-image: url(http://thenewfury.com/wordpress/wp-content/uploads/2018/11/2cead7ed6b0b45914a289e9e2c519028.jpg)
+}
+h1 {
+    font-family:Magneto;
+    font-size: 3rem;
+    color: white;
+}
+
+h2 {
+    font-family:Impact;
+
+}
+#navbar {
+    display: flex;    
+    top: 0;
+    background: white;
+    justify-content: center;
+    opacity:0.4;  
+    font-weight:bolder;
+    
+}
+p {
+    color: red;
+    font-family: Impact;
+    text-align:center;
+    margin-top: 15rem;
+    font-size: 3rem;
 }

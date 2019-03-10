@@ -18,8 +18,4 @@
     <PackageReference Include="NSubstitute" Version="4.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\CSS\Images\" />
-  </ItemGroup>
-
 </Project>
