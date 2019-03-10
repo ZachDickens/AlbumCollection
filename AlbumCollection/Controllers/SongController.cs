@@ -42,7 +42,7 @@ namespace AlbumCollection.Controllers
         public ActionResult AddSong(Song song)
         {
             songRepository.AddSong(song);
-            return RedirectToAction("../Album/Details/" + song.AlbumId, "Album");
+            return RedirectToAction("Details/" + song.AlbumId, "Album");
         }
 
     }

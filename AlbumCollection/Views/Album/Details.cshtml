@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details of the Album</title>
     <link rel="stylesheet" href="~/CSS/Album.css" />
+    
 </head>
 
 <body>
@@ -20,7 +21,7 @@
             <li><a href="/Album/details/1">Hybrid Theory</a></li>
             <li><a href="/Album/details/2">Meteora</a></li>
             <li><a href="/Album/details/3">Minutes to Midnight</a></li>
-            <li><a href="/Song/Create">Add a Song</a></li>
+            <li><a href="/Album/Index">Home</a></li>
         </ul>
     </nav>
     <h1>Songs in the Album</h1>
@@ -28,10 +29,11 @@
     {
 
         <h2>
-            @song.SongId.  @song.SongName
+              @song.SongName
 
-        </h2>
-
+        </h2>   
     }
+    
+     <h2><a href="/Song/AddSong/@Model.AlbumId">Add a Song</a></h2>  
 </body>
 </html>

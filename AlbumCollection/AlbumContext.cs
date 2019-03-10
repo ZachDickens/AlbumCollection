@@ -31,21 +31,26 @@ namespace AlbumCollection
                 {
                     AlbumId = 1,
                     AlbumName = "Hybrid Theory",
-                    ArtistName = "Linkin Park"
+                    ArtistName = "Linkin Park",
+                    ImgPath = "~/Images/HybridTheoryBackground"
+                    
                 },
 
                 new Album()
                 {
                     AlbumId = 2,
                     AlbumName = "Meteora",
-                    ArtistName = "Linkin Park"
+                    ArtistName = "Linkin Park",
+                    ImgPath = "~/Images/MeteoraBackground"
+
                 },
 
                 new Album()
                 {
                     AlbumId = 3,
                     AlbumName = "Minutes to Midnight",
-                    ArtistName = "Linkin Park"
+                    ArtistName = "Linkin Park",
+                    ImgPath = "~/Images/MinutestoMidnightBackground"
                 });
 
             modelBuilder.Entity<Song>().HasData(
